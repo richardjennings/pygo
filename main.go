@@ -1,7 +1,6 @@
 package main
 
-// #cgo CFLAGS: -I/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/include/python3.12
-// #cgo LDFLAGS: -L/opt/homebrew/Cellar/python@3.12/3.12.7/Frameworks/Python.framework/Versions/3.12/lib -lpython3.12
+// #cgo pkg-config: python3-embed
 // #include <Python.h>
 import "C"
 import "fmt"

@@ -1,11 +1,14 @@
 # PyGo
 
-Experiment to build statically compiled Python runtime in Go via CGO on Mac.
+Experiment to build statically compiled Python runtime in Go via Cgo on Mac.
 
 ## Install
 
-To date I had no luck getting brews pkg-config to report the correct Python paths.
-Currently, the linker and include paths are hard coded...
+Requires python3-embed resolvable via pkg-config
+
+```
+brew install python@3.12
+```
 
 ## Static Linking
 
@@ -22,4 +25,9 @@ which is apparently due to crt0 not being build statically n Mac OS X
 
 ## Conclusion
 
-Not easily achievable on OSX.
+A fully static binary does not look easily achievable on OSX.
+
+### And then
+
+Can we include python-embed statically ? 
+
